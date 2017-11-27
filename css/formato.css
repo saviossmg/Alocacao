@@ -1,0 +1,19 @@
+.navbar{
+    background: #dfdfdf;
+}
+.footer {
+	display: block;
+	background: #dfdfdf;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: 1px solid #93a4b6;
+    padding: 30px;overflow: hidden;
+}
+.logo_footer {
+	 background: rgba(0, 0, 0, 0) url("../img/logo_unitins.png") no-repeat scroll 0 0 / contain ;
+    height: 40px;
+    margin-left: 0;
+    text-indent: -3000px;
+    width: 155px;}
+.footer .disciplina {text-align:right;}
