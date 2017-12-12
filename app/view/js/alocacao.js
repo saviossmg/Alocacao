@@ -3,7 +3,7 @@
  * Data: 12/09/2017
  */
 
-var dir = "app/controller/alocacao/";
+var dir = "app/controller/";
 var dirLab = "app/controller/laboratorio/";
 
 //ALOCACAO
@@ -158,7 +158,7 @@ function editarLab(ident) {
                 //Coloca os valores do retorno nos campos devido
                 $("#lab").val(retorno.data.lab);
                 $("#tipouso").val(retorno.data.tipouso);
-                $("#turnolab").val(retorno.data.turnolab);
+                $("#turnolab").val(retorno.data.turno);
                 $("#dia").val(retorno.data.dia);
                 $("#observacao").val(retorno.data.observacao);
                 validarLab();

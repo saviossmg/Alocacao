@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Turmaprofessor
+ * TurmaProfessor
  *
- * @Table(name="turmaprofessor", indexes={@Index(name="fk_alocacaoSalas_has_vwServidores_vwServidores1_idx", columns={"Professor"}), @Index(name="fk_alocacaoSalas_has_vwServidores_alocacaoSalas1_idx", columns={"AlocacaoSala"}), @Index(name="fk_TurmaProfessor_SemestreLetivo1_idx", columns={"SemestreLetivo"})})
+ * @Table(name="TurmaProfessor", indexes={@Index(name="fk_alocacaoSalas_has_vwServidores_vwServidores1_idx", columns={"Professor"}), @Index(name="fk_alocacaoSalas_has_vwServidores_alocacaoSalas1_idx", columns={"AlocacaoSala"}), @Index(name="fk_TurmaProfessor_SemestreLetivo1_idx", columns={"SemestreLetivo"})})
  * @Entity
  */
 class Turmaprofessor

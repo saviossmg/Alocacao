@@ -2,7 +2,7 @@
 /**
  * Entidade
  *
- * @Table(name="entidade")
+ * @Table(name="Entidade")
  * @Entity
  */
 class Entidade

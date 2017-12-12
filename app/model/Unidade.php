@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
  * Unidade
  *
- * @Table(name="unidade", indexes={@Index(name="fk_unidade_vwServidores1_idx", columns={"DiretorGeral"}), @Index(name="fk_unidade_vwServidores2_idx", columns={"Administrador"})})
+ * @Table(name="Unidade", indexes={@Index(name="fk_unidade_vwServidores1_idx", columns={"DiretorGeral"}), @Index(name="fk_unidade_vwServidores2_idx", columns={"Administrador"})})
  * @Entity
  */
 class Unidade

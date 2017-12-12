@@ -1,8 +1,8 @@
 <?php
 /**
- * Alocacaosala
+ * AlocacaoSala
  *
- * @Table(name="alocacaosala", indexes={@Index(name="fk_alocacao_has_sala_sala1_idx", columns={"Sala"}), @Index(name="fk_AlocacaoSala_SemestreLetivo1_idx", columns={"Semestre"}), @Index(name="fk_AlocacaoSala_Oferta1_idx", columns={"Oferta"})})
+ * @Table(name="AlocacaoSala", indexes={@Index(name="fk_alocacao_has_sala_sala1_idx", columns={"Sala"}), @Index(name="fk_AlocacaoSala_SemestreLetivo1_idx", columns={"Semestre"}), @Index(name="fk_AlocacaoSala_Oferta1_idx", columns={"Oferta"})})
  * @Entity
  */
 class Alocacaosala

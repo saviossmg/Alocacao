@@ -53,7 +53,7 @@
                         <label class="col-md-3 control-label">Recurso</label>
                         <div class="col-md-7 selectContainer">
                             <select class="form-control" class="form-control" name="recurso" id="recurso">
-
+                                <option value="">Selecione o Equipamento.</option>
                             </select>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
  * Arquivo responsavel pela impressão de disponibilidade por sala
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . '\fpdf\fpdf.php';
 
 class PDF extends FPDF

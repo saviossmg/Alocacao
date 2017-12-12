@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
  * Registro
  *
- * @Table(name="registro", indexes={@Index(name="fk_registros_registros_idx", columns={"IdPai"}), @Index(name="fk_registros_entidade1_idx", columns={"IdEntidade"})})
+ * @Table(name="Registro", indexes={@Index(name="fk_registros_registros_idx", columns={"IdPai"}), @Index(name="fk_registros_entidade1_idx", columns={"IdEntidade"})})
  * @Entity
  */
 class Registro

@@ -22,20 +22,6 @@
     <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 
-    <!-- JDSF -->
-    <script type="text/javascript" src="js/jspdf/jspdf.js"></script>
-    <script type="text/javascript" src="js/jspdf/plugins/standard_fonts_metrics.js"></script>
-    <script type="text/javascript" src="js/jspdf/plugins/split_text_to_size.js"></script>
-    <script type="text/javascript" src="js/jspdf/plugins/from_html.js"></script>
-    <script type="text/javascript" src="js/jspdf/plugins/FileSaver.js"></script>
-    <script type="text/javascript" src="js/jspdf/plugins/cell.js"></script>
-
-    <!-- html2canvas -->
-    <script type="text/javascript" src="js/html2canvas/html2canvas.js"></script>
-    <script type="text/javascript" src="js/html2canvas/html2canvas.svg.js"></script>
-    <script type="text/javascript" src="js/html2canvas/CanvasRenderingContext2D.js"></script>
-    <script type="text/javascript" src="js/html2canvas/HTMLCanvasElement.js"></script>
-
     <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.pt-BR.min.js"></script>
 

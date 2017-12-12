@@ -2,7 +2,7 @@
 /**
  * Horarios
  *
- * @Table(name="horarios", indexes={@Index(name="fk_Horarios_registros1_idx", columns={"Turno"}), @Index(name="fk_Horarios_semestre1_idx", columns={"Semestre"})})
+ * @Table(name="Horarios", indexes={@Index(name="fk_Horarios_registros1_idx", columns={"Turno"}), @Index(name="fk_Horarios_semestre1_idx", columns={"Semestre"})})
  * @Entity
  */
 class Horarios

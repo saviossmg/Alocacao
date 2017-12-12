@@ -57,7 +57,7 @@
                         <div class="col-md-7 selectContainer">
                             <select class="form-control" class="form-control" name="unidade" id="unidade">
                                 <option value="">Selecione uma unidade</option>
-                                <?php include $_SERVER['DOCUMENT_ROOT']."/alocacao/app/controller/unidade/carregarCombo.php" ?>
+                                <?php include $_SERVER['DOCUMENT_ROOT']."/app/controller/unidade/carregarCombo.php" ?>
                             </select>
                         </div>
                     </div>

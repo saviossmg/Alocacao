@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Vwservidor
+ * VwServidor
  *
- * @Table(name="vwservidor")
+ * @Table(name="VwServidor")
  * @Entity
  */
 class Vwservidor

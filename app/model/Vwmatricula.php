@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Vwmatricula
+ * VwMatricula
  *
- * @Table(name="vwmatricula", indexes={@Index(name="fk_VwDisciplina_has_VwAluno_VwAluno1_idx", columns={"IdAluno"}), @Index(name="fk_VwDisciplina_has_VwAluno_VwDisciplina1_idx", columns={"IdDisciplina"}), @Index(name="fk_VwMatricula_SemestreLetivo1_idx", columns={"IdSemestreLetivo"})})
+ * @Table(name="VwMatricula", indexes={@Index(name="fk_VwDisciplina_has_VwAluno_VwAluno1_idx", columns={"IdAluno"}), @Index(name="fk_VwDisciplina_has_VwAluno_VwDisciplina1_idx", columns={"IdDisciplina"}), @Index(name="fk_VwMatricula_SemestreLetivo1_idx", columns={"IdSemestreLetivo"})})
  * @Entity
  */
 class Vwmatricula

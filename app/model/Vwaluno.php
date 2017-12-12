@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Vwaluno
+ * VwAluno
  *
- * @Table(name="vwaluno", indexes={@Index(name="fk_VwAluno_VwCurso1_idx", columns={"Curso"})})
+ * @Table(name="VwAluno", indexes={@Index(name="fk_VwAluno_VwCurso1_idx", columns={"Curso"})})
  * @Entity
  */
 class Vwaluno

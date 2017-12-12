@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
  * Sala
  *
- * @Table(name="sala", indexes={@Index(name="fk_salas_bloco1_idx", columns={"Predio"}), @Index(name="fk_salas_registros1_idx", columns={"Tipo"})})
+ * @Table(name="Sala", indexes={@Index(name="fk_salas_bloco1_idx", columns={"Predio"}), @Index(name="fk_salas_registros1_idx", columns={"Tipo"})})
  * @Entity
  */
 class Sala

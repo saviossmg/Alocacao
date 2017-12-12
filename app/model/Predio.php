@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
  * Predio
  *
- * @Table(name="predio", indexes={@Index(name="fk_predio_unidade1_idx", columns={"Unidade"})})
+ * @Table(name="Predio", indexes={@Index(name="fk_predio_unidade1_idx", columns={"Unidade"})})
  * @Entity
  */
 class Predio

@@ -6,7 +6,7 @@
  * Arquivo responsavel por vincular um registro a uma entidade
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
 //variavel para mostrar o resultado final

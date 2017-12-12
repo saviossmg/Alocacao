@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
  * Oferta
  *
- * @Table(name="oferta", indexes={@Index(name="fk_Oferta_VwCurso1_idx", columns={"Curso"}), @Index(name="fk_Oferta_Registro1_idx", columns={"DiaSemana"}), @Index(name="fk_Oferta_Registro2_idx", columns={"Turno"})})
+ * @Table(name="Oferta", indexes={@Index(name="fk_Oferta_VwCurso1_idx", columns={"Curso"}), @Index(name="fk_Oferta_Registro1_idx", columns={"DiaSemana"}), @Index(name="fk_Oferta_Registro2_idx", columns={"Turno"})})
  * @Entity
  */
 class Oferta

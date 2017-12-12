@@ -2,6 +2,7 @@
 $idsemestre = 0;
 if (!empty($_POST)) {
     $idsemestre = $_POST["idsemestreparam"];
+    $descsemestreparam = $_POST["descsemestreparam"];
 }
 ?>
 
@@ -9,7 +10,7 @@ if (!empty($_POST)) {
 <script type="text/javascript" src="app/view/js/semestreLetivo.js"></script>
 <!-- Content Section -->
 <div class="container-fluid">
-    <h3 class="page-header"><br/>Alocação - Semestre letivo. </h3>
+    <h3 class="page-header"><br/>Alocação - Semestre letivo. <?php if(!empty($_POST["descsemestreparam"])){ echo $descsemestreparam ;}?></h3>
     <input type="hidden" id="idSemestre" name="idSemestre" value="<?php echo $idsemestre ?>">
     <div id="top" class="row">
         <nav class="nav">
@@ -45,7 +46,7 @@ if (!empty($_POST)) {
                         <div class="col-md-7 selectContainer">
                             <select class="form-control" class="form-control" name="semestre" id="semestre">
                                 <option value="">Escolha o Semestre</option>
-                                <?php include $_SERVER['DOCUMENT_ROOT']."/alocacao/app/controller/semestre/carregarCombo.php" ?>
+                                <?php include $_SERVER['DOCUMENT_ROOT']."/app/controller/semestre/carregarCombo.php" ?>
                             </select>
                         </div>
                     </div>

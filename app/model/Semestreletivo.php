@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Semestreletivo
+ * SemestreLetivo
  *
- * @Table(name="semestreletivo", indexes={@Index(name="fk_alocacao_semestreLetivo1_idx", columns={"Semestre"}), @Index(name="fk_alocacao_vwCurso1_idx", columns={"Curso"})})
+ * @Table(name="SemestreLetivo", indexes={@Index(name="fk_alocacao_semestreLetivo1_idx", columns={"Semestre"}), @Index(name="fk_alocacao_vwCurso1_idx", columns={"Curso"})})
  * @Entity
  */
 class Semestreletivo

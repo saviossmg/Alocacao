@@ -6,7 +6,7 @@
  * Arquivo responsavel pela listagem de todos os itens e construção da tabela de exibição
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
 $curso = $_POST['idCurso'];

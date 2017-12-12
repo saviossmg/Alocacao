@@ -72,7 +72,7 @@
                         <div class="col-md-7 selectContainer">
                             <select class="form-control" class="form-control" name="diretorgeral" id="diretorgeral">
                                 <option value="">Escolha um(a) servidor(a)</option>
-                                <?php include $_SERVER['DOCUMENT_ROOT']."/alocacao/app/controller/servidor/carregarCombo.php"?>
+                                <?php include $_SERVER['DOCUMENT_ROOT']."/app/controller/servidor/carregarCombo.php"?>
                             </select>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                             <select class="form-control" class="form-control" name="administrador"
                                     id="administrador">
                                 <option value="">Escolha um(a) servidor(a)</option>
-                                <?php include $_SERVER['DOCUMENT_ROOT']."/alocacao/app/controller/servidor/carregarCombo.php"?>
+                                <?php include $_SERVER['DOCUMENT_ROOT']."/app/controller/servidor/carregarCombo.php"?>
                             </select>
                         </div>
                     </div>

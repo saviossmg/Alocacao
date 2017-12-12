@@ -6,7 +6,7 @@
  * Arquivo responsavel por deletar um registro
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'].'/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
 //variavel para mostrar o resultado final

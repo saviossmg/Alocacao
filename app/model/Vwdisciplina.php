@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Vwdisciplina
+ * VwDisciplina
  *
- * @Table(name="vwdisciplina", indexes={@Index(name="fk_vwDisciplina_vwCurso1_idx", columns={"Curso"}), @Index(name="fk_vwDisciplina_vwDisciplina1_idx", columns={"PreRequesito"})})
+ * @Table(name="VwDisciplina", indexes={@Index(name="fk_vwDisciplina_vwCurso1_idx", columns={"Curso"}), @Index(name="fk_vwDisciplina_vwDisciplina1_idx", columns={"PreRequesito"})})
  * @Entity
  */
 class Vwdisciplina

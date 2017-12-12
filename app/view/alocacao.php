@@ -13,7 +13,7 @@ if (!empty($_POST)) {
 }
 ?>
 <!-- Custom JS file -->
-<script type="text/javascript" src="app/view/js/alocacao.js"></script>
+<script type="text/javascript" src="app/view/js.js"></script>
 
 <!-- Content Section -->
 <div class="container-fluid">
@@ -58,14 +58,6 @@ if (!empty($_POST)) {
             </div>
             <div class="tab-pane" id="aloc" role="tabpanel">
                 <nav class="nav">
-                    <button type="button" class="btn btn-success" id="imprimir1"
-                            onclick="imprimir1();">
-                        Direção <span class="glyphicon glyphicon-print" aria-hidden="true"/>
-                    </button>
-                    <button type="button" class="btn btn-info" id="imprimir2"
-                            onclick="imprimir2();">
-                        Mural <span class="glyphicon glyphicon-print" aria-hidden="true"/>
-                    </button>
                     <a class="nav-link disabled pull-right" href="#">Salas alocadas para o semestre letivo do curso selecionado.</a>
                 </nav>
                 <div class="records_content_alocacoes"></div>

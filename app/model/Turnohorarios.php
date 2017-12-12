@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Turnohorarios
+ * TurnoHorarios
  *
- * @Table(name="turnohorarios", indexes={@Index(name="fk_TurnoHorario_Registro1_idx", columns={"Turno"})})
+ * @Table(name="TurnoHorarios", indexes={@Index(name="fk_TurnoHorario_Registro1_idx", columns={"Turno"})})
  * @Entity
  */
 class Turnohorarios

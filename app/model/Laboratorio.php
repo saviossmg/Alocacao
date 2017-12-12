@@ -2,7 +2,7 @@
 /**
  * Laboratorio
  *
- * @Table(name="laboratorio", indexes={@Index(name="fk_Laboratorio_Sala1_idx", columns={"Laboratorio"}), @Index(name="fk_Laboratorio_Registro1_idx", columns={"TipoUso"}), @Index(name="fk_Laboratorio_Registro2_idx", columns={"Turno"}), @Index(name="fk_Laboratorio_Registro3_idx", columns={"Dia"}), @Index(name="fk_Laboratorio_VwSemestre1_idx", columns={"Semestre"})})
+ * @Table(name="Laboratorio", indexes={@Index(name="fk_Laboratorio_Sala1_idx", columns={"Laboratorio"}), @Index(name="fk_Laboratorio_Registro1_idx", columns={"TipoUso"}), @Index(name="fk_Laboratorio_Registro2_idx", columns={"Turno"}), @Index(name="fk_Laboratorio_Registro3_idx", columns={"Dia"}), @Index(name="fk_Laboratorio_VwSemestre1_idx", columns={"Semestre"})})
  * @Entity
  */
 class Laboratorio

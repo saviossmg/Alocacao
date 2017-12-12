@@ -178,6 +178,7 @@ $(document).ready(function () {
             $("#id").val("");
         })
     });
+    //combo tipo sala
     $.post("app/controller/registro/carregarCombo.php", {
         identidade: 1
     },

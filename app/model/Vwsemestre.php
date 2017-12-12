@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
- * Vwsemestre
+ * VwSemestre
  *
- * @Table(name="vwsemestre")
+ * @Table(name="VwSemestre")
  * @Entity
  */
 class Vwsemestre

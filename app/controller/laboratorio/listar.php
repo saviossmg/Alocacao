@@ -6,7 +6,7 @@
  * Arquivo responsavel pela listagem de todos os itens e construção da tabela de exibição
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
 // Design initial table header
@@ -16,6 +16,8 @@ $data = '<table id="laboratorios" class="table table-condensed-bordered">
                     <th>No.</th>  
                     <th>Nome</th>  
                     <th>Tipo de Uso</th>  
+                    <th>Turno</th>  
+                    <th>Dia</th>  
                     <th>Observação</th>  
                     <th class="actions">Ações</th> 
                 </tr>  
@@ -47,11 +49,21 @@ $totalregistro = $qCount->getQuery()->getSingleScalarResult();
 if ($totalregistro > 0) {
     $numero = 1;
     foreach ($rs as $idx => $model) {
+        $dia = "<span class=\"label label-danger\">Nenhum</span>";
+        $turno = "<span class=\"label label-danger\">Nenhum</span>";
+        if(!empty($model->getDia())){
+            $dia = '<span class="label label-danger">'.$model->getDia()->getDescricao().'</span>';
+        }
+        if(!empty($model->getTurno())){
+            $turno = '<span class="label label-success">'.$model->getTurno()->getDescricao().'</span>';
+        }
         $data .= '
             <tr>
                 <td>' . $numero . '</td>
                 <td>' . $model->getLaboratorio()->getNome() . '</td>
                 <td>' . $model->getTipouso()->getDescricao() . '</td>
+                <td>' . $turno . '</td>
+                <td>' . $dia. '</td>
                 <td>' . $model->getObservacao() . '</td>
                 <td class="actions">	
                     <button data-toggle="tooltip" data-placement="top" title="Editar" onclick="editarLab(' . $model->getId() . ')" class="btn btn-warning">

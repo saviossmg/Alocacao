@@ -6,7 +6,7 @@
  * Arquivo responsavel por inserir um registro novo ou editado ( nesse caso o id é informado )
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
 //variavel para mostrar o resultado final

@@ -1,13 +1,8 @@
 <?php
-
-
-
-
-
 /**
  * Recursossalas
  *
- * @Table(name="recursossalas", indexes={@Index(name="fk_registros_has_sala_sala1_idx", columns={"Sala"}), @Index(name="fk_registros_has_sala_registros1_idx", columns={"Registro"})})
+ * @Table(name="RecursosSalas", indexes={@Index(name="fk_registros_has_sala_sala1_idx", columns={"Sala"}), @Index(name="fk_registros_has_sala_registros1_idx", columns={"Registro"})})
  * @Entity
  */
 class Recursossalas

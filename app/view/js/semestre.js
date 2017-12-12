@@ -147,14 +147,14 @@ function detalhes(ident){
             var retorno = JSON.parse((data));
             //Coloca os valores do retorno nos campos devido
             var descricao = retorno.data.descricao;
-            //cria um form com os parametros
-            var postFormStr = "<form method='post' action='semestreLetivo.php'>\n";
-            postFormStr += "<input type='hidden' name='idsemestreparam' value='"+ident+"'/>";
-            postFormStr += "<input type='hidden' name='descsemestreparam' value='"+descricao+"'/>";
-            postFormStr += "</form>";
-            var formElement = $(postFormStr);
-            $('body').append(formElement);
-            $(formElement).submit();
+            $.post("app/view/semestreLetivo.php", {
+                    'idsemestreparam': ident,
+                    'descsemestreparam': descricao
+                },
+                function (data) {
+                    $("#main").html(data); //data is everything you 'echo' on php side
+                }
+            );
         }
     );
 }
