@@ -5,7 +5,7 @@
  * Arquivo responsavel pela listagem de todas as ofertas para retornar para o APP
  */
 
-define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/Alocacao\\');
+define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
 try{
