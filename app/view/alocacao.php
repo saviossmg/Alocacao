@@ -51,14 +51,15 @@ if (!empty($_POST)) {
                             onclick="sincronizarOfertas();">
                         Sincrozinar <span class="glyphicon glyphicon-repeat" aria-hidden="true"/>
                     </button>
-                    <a class="nav-link disabled pull-right" href="#">Ofertas disponibilizadas para o curso no semestre
-                        letivo selecionado.</a>
+                    <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#alocoferta_info">
+                        Ofertas disponibilizadas para o curso no semestre letivo selecionado. (?)</a>
                 </nav>
                 <div class="records_content_ofertas"></div>
             </div>
             <div class="tab-pane" id="aloc" role="tabpanel">
                 <nav class="nav">
-                    <a class="nav-link disabled pull-right" href="#">Salas alocadas para o semestre letivo do curso selecionado.</a>
+                    <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#alocaloc_info">
+                        Salas alocadas para o semestre letivo do curso selecionado. (?)</a>
                 </nav>
                 <div class="records_content_alocacoes"></div>
             </div>
@@ -67,8 +68,8 @@ if (!empty($_POST)) {
                     <a class="btn btn-success btn-small" href="#" data-toggle="modal" data-target="#laboratorio_modal">
                         <i class="fa fa-plus-square"></i>Alocar Laborátorio <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
                     </a>
-                    <a class="nav-link disabled pull-right" href="#">Personalização do uso dos laborátorios que não estão na alocação
-                        convencional.</a>
+                    <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#aloclab_info">
+                        Personalização do uso dos laborátorios que não estão na alocação convencional. (?)</a>
                 </nav>
                 <div class="records_content_laboratorio"></div>
             </div>
@@ -137,7 +138,6 @@ if (!empty($_POST)) {
                             </select>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-md-5 col-md-offset-3">
                             <button type="button" class="btn btn-primary" id="salvar" onclick="alocarOferta();">
@@ -232,6 +232,87 @@ if (!empty($_POST)) {
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="alocoferta_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Alocação - Curso: Ofertas - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar a Alocação. Esta aba mostra as Ofertas VINCULADAS e SINCRONIZADAS
+                    ao Curso e Semestre selecionado, sem estarem alocadas em uma sala. É possível sincronizar e excluir uma Oferta da Unidade. <br><br>
+                    Todas as Ofertas são sincronizadas diretamente do Sistema -- da Unitins, podendo essas ofertas serem sincronizadas e atualizadas
+                    mesmo que a oferta já tenha sido alocada.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="alocaloc_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Alocação - Curso: Alocações - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar a Alocação. Esta aba mostra as Ofertas ALOCADAS
+                    ao Curso e Semestre selecionado, mostrando a sala que foi designada. É possível editar e excluir uma Alocação. <br><br>
+                    Todas as Ofertas são sincronizadas diretamente do Sistema -- da Unitins, podendo essas ofertas serem sincronizadas e atualizadas
+                    mesmo que a oferta já tenha sido alocada.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="aloclab_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Alocação - Curso: Alocações - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar a Alocação. Esta aba mostra os usos ESPECIFICOS de Laboratório ALOCADOS
+                    ao Semestre selecionado, mostrando o tipo de uso. É possível editar e excluir um uso Alocação. <br>
+                    Esses usos não fazem parte do sistema da Unitins e devem ser inseridos pelo Administrador.<br><br>
+                    Esses são os tipos e os parâmetros obrigatórios para cada um deles:<br>
+                    <ul>
+                        <li>Monitoria: Dia, Curso e Turno, restrição pequena de uso (trava o dia e o turno);</li>
+                        <li>Uso Comum: Turno, restrição média de uso (trava todo o turno) ;</li>
+                        <li>Uso Exclusivo: Curso, restrição alta (trava apenas par ao curso selecionado); <li>
+                    </ul><br>
+                    É possível utilizar mais de um tipo no mesmo laboratório, desde que se respeite as regras de inserção.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>
