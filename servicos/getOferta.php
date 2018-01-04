@@ -29,9 +29,23 @@ try{
         foreach ($rs as $idx => $model) {
             $data[$idx]["id"] = $model->getId();
             $data[$idx]["nometurma"] = $model->getNometurma();
-//            $data[$idx]["semestre"] = $model->getSemestre()->getId();
-//            $data[$idx]["sala"] = $model->getSala()->getId();
-//            $data[$idx]["oferta"] = $model->getOferta()->getId();
+            $data[$idx]["curso"] = $model->getCurso()->getId();
+            $data[$idx]["diasemana"] = $model->getDiasemana()->getDescricao();
+            $data[$idx]["periodo"] = $model->getPeriodo();
+            $data[$idx]["disciplina"] = $model->getDisciplina();
+            $data[$idx]["descricaoperiodoletivo"] = $model->getDescricaoperiodoletivo();
+            $data[$idx]["horainiciala"] = $model->getHorainiciala();
+            $data[$idx]["horafinala"] = $model->getHorafinala();
+            $data[$idx]["intervaloinicio"] = $model->getIntervaloinicio();
+            $data[$idx]["intervalofim"] = $model->getIntervalofinal();
+            $data[$idx]["horainicialb"] = $model->getHorainicialb();
+            $data[$idx]["horafinalb"] = $model->getHorafinalb();
+            $data[$idx]["professor"] = $model->getProfessortitular();
+            $data[$idx]["tipohorario"] = $model->getTipohorario();
+			$data[$idx]["turno"] = null;
+			if(!empty($model->getTurno()))
+				$data[$idx]["turno"] = $model->getTurno()->getDescricao();	
+
         }
         $mensagem =  $totalregistro." registros encontrados";
         $resultado = ['status' => true, 'mensagem' => $mensagem, 'data' => $data];

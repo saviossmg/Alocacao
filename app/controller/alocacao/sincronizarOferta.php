@@ -170,8 +170,35 @@ function  inserirNovoRegistro($ofertaP,$entityManager, $curso, $semestre){
     $model->setPeriodo($ofertaP['periodo']);
     $model->setDisciplina($ofertaP['disciplina']);
     $model->setDescricaoperiodoletivo($ofertaP['descricaoPeriodoLetivo']);
-    $model->setProfessortitular($ofertaP['professorTitular']);
-    $model->setTipoprofessor($ofertaP['tipoProfessor']);
+    //verifica se é um array
+    if(is_array($ofertaP['professorTitular'])){
+        if(count($ofertaP['professorTitular']) == 0){
+            $model->setProfessortitular("N/D");
+        }
+        else{
+            $texto = "";
+            foreach ($ofertaP['professorTitular'] as $k => $v){
+                $texto .= $v ." - ";
+            }
+            $model->setProfessortitular($texto);
+        }
+    }
+    else{
+        $model->setProfessortitular($ofertaP['professorTitular']);
+    }
+    //
+    if(is_array($ofertaP['tipoProfessor'])){
+        if(count($ofertaP['professorTitular']) == 0){
+            $model->setTipoprofessor("N");
+        }
+        else{
+            $model->setTipoprofessor("T");
+        }
+    }
+    else{
+        $model->setTipoprofessor($ofertaP['tipoProfessor']);
+    }
+
     $entityManager->persist($model);
     $entityManager->flush();
 }
@@ -188,7 +215,23 @@ function  editaRegistro($model, $ofertaP,$entityManager){
         $diasemana = $entityManager->find('Registro',$ofertaP['diaSemana']);
 
         $model->setCodturma($ofertaP['codTurma']);
-        $model->setProfessortitular($ofertaP['professorTitular']);
+
+        //verifica se é um array
+        if(is_array($ofertaP['professorTitular'])){
+            if(count($ofertaP['professorTitular']) == 0){
+                $model->setProfessortitular("N/D");
+            }
+            else{
+                $texto = "";
+                foreach ($ofertaP['professorTitular'] as $k => $v){
+                    $texto .= $v. " - ";
+                }
+                $model->setProfessortitular($texto);
+            }
+        }
+        else{
+            $model->setProfessortitular($ofertaP['professorTitular']);
+        }
         $model->setDiasemana($diasemana);
 
         $entityManager->persist($model);
@@ -210,8 +253,10 @@ $atualizados = 0;
 
 try {
     //carrega os modelos
-    $curso = $entityManager->find('Vwcurso', $_POST['idCurso']);
-    $semestre = $entityManager->find('Vwsemestre', $_POST['idSemestre']);
+//    $curso = $entityManager->find('Vwcurso', $_POST['idCurso']);
+//    $semestre = $entityManager->find('Vwsemestre', $_POST['idSemestre']);
+    $curso = $entityManager->find('Vwcurso', 4);
+    $semestre = $entityManager->find('Vwsemestre', 3);
 
     //procura os registros no banco
     //pega o total de registros
