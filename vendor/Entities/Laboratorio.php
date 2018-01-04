@@ -262,3 +262,4 @@ class Laboratorio
         return $this->semestre;
     }
 }
+

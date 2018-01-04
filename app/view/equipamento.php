@@ -9,7 +9,7 @@
                 <i class="fa fa-plus-square"></i>Novo Equipamento <span class="glyphicon glyphicon-plus"
                                                                         aria-hidden="true"/>
             </a>
-            <a class="nav-link disabled pull-right" href="#">Equipamentos presentes nas Salas e Laboratorios</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#equipamento_info">Equipamentos presentes nas Salas e Laboratorios (?)</a>
         </nav>
     </div>
     <div class="row">
@@ -67,6 +67,36 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="equipamento_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Equipamentos - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo o cadastro e manipulação dos Equipamentos da Universidade. É possível
+                    cadastrar, editar e excluir um Equipamento, diferente do Classes de Equipamentos, aqui é feito o cadastro de um equipamento
+                    em especifico. <br><br>Para cadastrar um novo Equipamento, é necessário:<br>
+                    <ul>
+                        <li>Nome;</li>
+                        <li>Tipo do Equipamento;</li>
+                        <li>Se está Ativa ou Não;</li>
+                    </ul><br>
+                    Todos os campos são obrigatórios.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

@@ -625,3 +625,4 @@ class Oferta
         return $this->curso;
     }
 }
+

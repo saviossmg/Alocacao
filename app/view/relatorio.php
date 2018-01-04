@@ -6,7 +6,7 @@
     <h3 class="page-header"><br/>Relatórios.</h3>
     <div id="top" class="row">
         <nav class="nav">
-            <a class="nav-link disabled pull-right" href="#">Relatórios das Alocações.</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#relatorio_info">Relatórios das Alocações(?)</a>
         </nav>
     </div>
     <div class="row">
@@ -185,6 +185,37 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="relatorio_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Relatórios - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo gerar os relatórios para impressão. Para gerar os relatórios é necessário clicar
+                    no tipo e ter dados de alocação cadastrados. <br><br>
+                    Os tipos são:<br>
+                    <ul>
+                        <li>Identificação de Salas, um relatório que identifica a sala com curso, período e dias que está ocupada ou livre.
+                            Fica na porta da sala/laboratório;</li>
+                        <li>Mapa de Uso do Curso, um relatório que identifica as salas utilizadas por um curso, ficando nos murais dos blocos. </li>
+                        <li>Mapa de Uso das Salas, um relatório que identifica as salas utilizadas por todo um campus, ficando nos murais dos blocos. </li>
+                    </ul><br>
+                    O PDF gerado será aberto em uma janela pop-up, sendo recomendando que seja salvo antes de ser impresso.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

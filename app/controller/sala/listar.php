@@ -63,9 +63,11 @@ if ($totalregistro > 0) {
                 <td>' . $predio . '</td>
                 <td>' . $ativo. '</td>
                 <td class="actions">	
+                    <!--
                     <button data-toggle="tooltip" data-placement= "top" title="Imprimir Disponibilidade." class="btn btn-info"  onclick="imprimir('.$model->getId().')">
                         <span class="glyphicon glyphicon-print" aria-hidden="true"/>
-                    </button>
+                    </button> 
+                    -->
                     <button data-toggle="tooltip" data-placement= "top" title="Detalhes" class="btn btn-success"  onclick="detalhes('.$model->getId().')">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"/>
                     </button>

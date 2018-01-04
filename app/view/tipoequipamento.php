@@ -8,7 +8,7 @@
                 <a class="btn btn-success btn-small" href="#" data-toggle="modal" data-target="#tipoclasseequipamento_modal">
                     <i class="fa fa-plus-square"></i>Novo Tipo <span class="glyphicon glyphicon-plus"aria-hidden="true"/>
                 </a>
-                <a class="nav-link disabled pull-right" href="#">Classes de Equipamentos</a>
+                <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#tipoequipamento_info">Classes de Equipamentos (?)</a>
             </nav>
         </div>
         <div class="row">
@@ -57,6 +57,35 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Info -->
+    <div class="modal fade" id="tipoequipamento_info" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tipos de Equipamento - Ajuda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p align="justify">
+                        Este menu do sistema tem como objetivo o cadastro dos Tipos/Classes de Equipamentos da Universidade.
+                        É possível cadastrar, editar e excluir um Tipo de Equipamento. <br><br>
+                        Para cadastrar um novo Tipo, é necessário:<br>
+                        <ul>
+                            <li>Descrição do Tipo;</li>
+                            <li>Se está ativo ou não; </li>
+                        </ul><br>
+                        Todos os campos são obrigatórios.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
                 </div>
             </div>
         </div>

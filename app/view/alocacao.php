@@ -13,7 +13,7 @@ if (!empty($_POST)) {
 }
 ?>
 <!-- Custom JS file -->
-<script type="text/javascript" src="app/view/js.js"></script>
+<script type="text/javascript" src="app/view/js/alocacao.js"></script>
 
 <!-- Content Section -->
 <div class="container-fluid">
@@ -207,6 +207,12 @@ if (!empty($_POST)) {
                         <label class="col-md-3 control-label">Dia</label>
                         <div class="col-md-7 selectContainer">
                             <select class="form-control" class="form-control" name="dia" id="dia"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Curso</label>
+                        <div class="col-md-7 selectContainer">
+                            <select class="form-control" class="form-control" name="curso" id="curso"/>
                         </div>
                     </div>
                     <div class="form-group">

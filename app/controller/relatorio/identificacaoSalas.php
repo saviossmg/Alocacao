@@ -96,6 +96,8 @@ echo json_encode($resultado);
 //HTML QUE ESTARA NO ARQUIVO
 function preencherSala($model, $salasalocadas, $eM)
 {
+    $campus = strtoupper($model->getPredio()->getUnidade()->getNome());
+    $bloco = strtoupper($model->getPredio()->getNome());
     $vazio = '<p class="texto3">---</p>';
     //varivaies de controle
     $manha = $vazio; //id = 9
@@ -243,7 +245,7 @@ function preencherSala($model, $salasalocadas, $eM)
                                     <p class="cabecalho"><center>
                                     FUNDAÇÃO UNIVERSIDADE DO TOCANTINS – UNITINS<br>
                                     PRÓ-REITORIA DE GRADUAÇÃO<br>
-                                    CÂMPUS GRACIOSA
+                                    '.$campus.' - '.$bloco.'
                                     </center></p>
                                 </td>
                             </tr>
@@ -260,7 +262,7 @@ function preencherSala($model, $salasalocadas, $eM)
                             </td>
                         </tr>
                         </tbody>
-                    </table>		
+                    </table>		 
                 </div>	
                 <br>
                 <div id="is_content">
@@ -329,6 +331,8 @@ function preencherSala($model, $salasalocadas, $eM)
 
 function preencherLabim($model, $salasalocadas, $eM)
 {
+    $nomecampus = strtoupper($model->getPredio()->getUnidade()->getNome());
+    $nomebloco = strtoupper($model->getPredio()->getNome());
     //varivaies de controle
     $vazio = '<p class="textoI1">---</p>';
     $agendamento = '<p class="textoI1">AGENDAMENTO</p>';
@@ -475,7 +479,7 @@ function preencherLabim($model, $salasalocadas, $eM)
                             <center>
                                 FUNDAÇÃO UNIVERSIDADE DO TOCANTINS – UNITINS<br>
                                 PRÓ-REITORIA DE GRADUAÇÃO<br>
-                                CÂMPUS GRACIOSA
+                                '.$nomecampus.' - '.$nomebloco.'
                             </center>
                             </p>
                         </td>
@@ -489,7 +493,7 @@ function preencherLabim($model, $salasalocadas, $eM)
                     <tbody>
                     <tr>
                         <td>
-                            <p class="texto1"><center>' . $model->getNome() . '</center></p>
+                            <p class="texto1"><center>' . $model->getNome() .'</center></p>
                         </td>
                     </tr>
                     </tbody>

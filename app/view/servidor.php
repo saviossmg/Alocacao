@@ -9,7 +9,7 @@
                 <i class="fa fa-plus-square"></i>Novo Servidor<span class="glyphicon glyphicon-plus"
                                                                     aria-hidden="true"/>
             </a>
-            <a class="nav-link disabled pull-right" href="#">Servidores não-docentes da universidad</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#servidor_info">Servidores não-docentes da universidade (?)</a>
         </nav>
     </div>
     <div class="row">
@@ -71,6 +71,37 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="servidor_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Servidores - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo o cadastro e manipulação dos Servidores Não-Docentes da Universidade.
+                    É possível cadastrar, editar e excluir um Servidor, sendo essas informações sendo usadas apenas no cadastro
+                    de Unidades. <br><br>Para cadastrar é necessário:<br>
+                    <ul>
+                        <li>Nome;</li>
+                        <li>Matricula;</li>
+                        <li>Cargo, em texto;</li>
+                        <li>Se está Ativo ou Não;</li>
+                    </ul><br>
+                    Todos os campos são obrigatórios.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

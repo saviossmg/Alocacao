@@ -6,50 +6,38 @@
 var dir = "app/controller/relatorio/";
 
 function impressao1(){
-    var check = validar1();
-    //se a checagem for verdadeira, ele deixa passar o registro
-    if (check) {
-        $("#impressao_espera").modal("show");
-        // get values
-        var semestre = $("#semestre").val();
-        var salas = $("#salas").val();
-        var campus = $("#unidade").val();
-        $.post(dir + "identificacaoSalas.php", {
-            salas: salas,
-            semestre: semestre,
-            campus: campus
-        }, function (data){
-            //captura o retorno da função
-            $("#impressao_espera").modal("hide");
-            retorno = JSON.parse(data);
-            if (retorno.status) {
-                // close the popup
-                $("#rel1_modal").modal("hide");
+    $("#impressao_espera").modal("show");
+    // get values
+    var semestre = $("#semestre").val();
+    var salas = $("#salas").val();
+    var campus = $("#unidade").val();
+    $.post(dir + "identificacaoSalas.php", {
+        salas: salas,
+        semestre: semestre,
+        campus: campus
+    }, function (data){
+        //captura o retorno da função
+        $("#impressao_espera").modal("hide");
+        retorno = JSON.parse(data);
+        if (retorno.status) {
+            // close the popup
+            $("#rel1_modal").modal("hide");
 
-                //mostra a mensagem de sucesso
-                window.open(retorno.data, 'popUpWindow','directories=no height=400, width=650, left=300, top=100, ' +
-                    'resizable=yes, scrollbars=yes, toolbar=yes, menubar=no, location=no, directories=no, status=yes');
+            //mostra a mensagem de sucesso
+            window.open(retorno.data, 'popUpWindow','directories=no height=400, width=650, left=300, top=100, ' +
+                'resizable=yes, scrollbars=yes, toolbar=yes, menubar=no, location=no, directories=no, status=yes');
 
-                // clear fields from the popup
-                $("#semestre").val("");
-                $("#unidade").val("");
-                $("#salas").empty();
-                $("#salas").selectpicker("refresh");
+            // clear fields from the popup
+            $("#semestre").val("");
+            $("#unidade").val("");
+            $("#salas").empty();
+            $("#salas").selectpicker("refresh");
 
-            }
-            else {
-                bootbox.alert(retorno.mensagem);
-            }
-        });
-    }
-    else {
-        //simula um submit para mostrar os campos que estão invalidos e as respectivas entradas
-        var event = jQuery.Event("submit");
-        $("form:first").trigger(event);
-        if (event.isDefaultPrevented()) {
-            validar1();
         }
-    }
+        else {
+            bootbox.alert(retorno.mensagem);
+        }
+    });
 }
 
 function impressao2(){
@@ -88,6 +76,37 @@ function impressao2(){
     );
 }
 
+function impressao3(){
+    $("#impressao_espera").modal("show");
+    // get values
+    var semestre = $("#semestre3").val();
+    var campus = $("#unidade3").val();
+    $.post(dir + "mapaUsosala.php", {
+            semestre: semestre,
+            campus: campus
+        }, function (data){
+            //captura o retorno da função
+            $("#impressao_espera").modal("hide");
+            retorno = JSON.parse(data);
+            if (retorno.status) {
+                // close the popup
+                $("#rel3_modal").modal("hide");
+
+                //mostra a mensagem de sucesso
+                window.open(retorno.data, 'popUpWindow','directories=no height=400, width=650, left=300, top=100, ' +
+                    'resizable=yes, scrollbars=yes, toolbar=yes, menubar=no, location=no, directories=no, status=yes');
+
+                // clear fields from the popup
+                $("#semestre3").val("");
+                $("#unidade3").val("");
+            }
+            else {
+                bootbox.alert(retorno.mensagem);
+            }
+        }
+    );
+}
+
 //função que vai imprimir
 function imprimir(id) {
     if(id == 1){
@@ -99,7 +118,7 @@ function imprimir(id) {
         mudaCampus2();
     }
     if (id == 3) {
-        console.log("relatorio 3");
+        $("#rel3_modal").modal("show");
     }
 }
 

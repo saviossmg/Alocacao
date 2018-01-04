@@ -48,9 +48,9 @@ if ($totalregistro > 0) {
                     <button data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar(' . $model->getId() . ')" class="btn btn-warning">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                     </button>
-                    <button data-toggle="tooltip" data-placement="top" title="Excluir" onclick="deletar(' . $model->getId() . ')" class="btn btn-danger">
+                    <!--<button data-toggle="tooltip" data-placement="top" title="Excluir" onclick="deletar(' . $model->getId() . ')" class="btn btn-danger">
                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                    </button>
+                    </button>-->
                 </td>
             </tr>';
         $numero++;

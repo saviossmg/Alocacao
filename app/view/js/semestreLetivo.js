@@ -127,7 +127,7 @@ function detalhes(ident) {
             var idcurso = retorno.data.idcurso;
             var curso = retorno.data.curso;
             //cria um form com os parametros
-            $.post("app/view.php", {
+            $.post("app/view/alocacao.php", {
                     'idsemestreletivo': ident,
                     'idsemestre': idsemestre,
                     'semestre': semestre,

@@ -38,7 +38,7 @@ INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (6, 'Quarta-Feira', 1
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (6, 'Quinta-Feira', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (6, 'Sexta-Feira', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (6, 'Sábado', 1);
-INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Normal', 1);
+INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Monitoria', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Uso Comum', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Uso Exclusivo', 1);
 

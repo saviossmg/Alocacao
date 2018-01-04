@@ -8,7 +8,7 @@
             <a class="btn btn-success btn-small" href="#" data-toggle="modal" data-target="#curso_modal">
                 <i class="fa fa-plus-square"></i>Novo Curso <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
             </a>
-            <a class="nav-link disabled pull-right" href="#">Cursos da Universidade</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#curso_info">Cursos da Universidade (?)</a>
         </nav>
     </div>
     <div class="row">
@@ -71,6 +71,36 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="curso_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Curso - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo o cadastro e manipulação dos Cursos da Universidade. É possível
+                    cadastrar, editar e excluir um Curso.<br><br>Para cadastrar um novo Curso, é necessário:<br>
+                    <ul>
+                        <li>Nome;</li>
+                        <li>Sigla do Curso;</li>
+                        <li>Código do Curso – apenas números;</li>
+                        <li>Unidade – uma Unidade/Campus já cadastrado;</li>
+                    </ul><br>
+                    Todos os campos são obrigatórios.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

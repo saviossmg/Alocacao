@@ -29,7 +29,8 @@
                         <i class="fa fa-plus-square"></i>Adicionar Recurso <span class="glyphicon glyphicon-plus"
                                                                                  aria-hidden="true"/>
                     </a>
-                    <a class="nav-link disabled pull-right" href="#">Recursos Presentes na Sala.</a>
+                    <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#saladetalhes_info">
+                        Recursos Presentes na Sala. (?)</a>
                 </nav>
                 <div class="records_content_recursossala"></div>
             </div>
@@ -75,6 +76,35 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="saladetalhes_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalhes da Sala: Recursos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar os detalhas de uma Sala. Esta aba mostra os Recursos VINCULADAS
+                    ao Prédio selecionado. É possível vincular e desvincular uma recursos. <br><br>
+                    Para vincular um recurso sala, é necessário:<br>
+                    <ul>
+                        <li>Selecionar um Recurso que esteja ativo;</li>
+                        <li>A quantidade presente;</li>
+                    </ul><br>
+                    Só aparece para vincular os Recursos que estão Ativos.
+                    </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

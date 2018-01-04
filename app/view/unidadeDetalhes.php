@@ -33,7 +33,8 @@
                         <i class="fa fa-plus-square"></i>Vincular Bloco <span class="glyphicon glyphicon-plus"
                                                                               aria-hidden="true"/>
                     </a>
-                    <a class="nav-link disabled pull-right" href="#">Prédios e Blocos Vinculados a Unidade</a>
+                    <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#unipredio_info">
+                        Prédios e Blocos Vinculados a Unidade. (?)</a>
                 </nav>
                 <div class="records_content_prediosunidade"></div>
             </div>
@@ -45,7 +46,8 @@
                             <i class="fa fa-plus-square"></i>Vincular Curso <span class="glyphicon glyphicon-plus"
                                                                                   aria-hidden="true"/>
                         </a>
-                        <a class="nav-link disabled pull-right" href="#">Cursos Vinculados a Unidade</a>
+                        <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#unicurso_info">
+                            Cursos Vinculados a Unidade. (?)</a>
                     </nav>
                     <div class="records_content_cursosunidade"></div>
                 </div>
@@ -116,6 +118,62 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="unipredio_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalhes da Unidade: Predio - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar os detalhas de uma Unidade. Esta aba mostra os Prédios e Blocos VINCULADOS
+                    a Unidade selecionada. É possível vincular e desvincular um prédio da Unidade, além de acessar os detalhes do prédio. <br><br>
+                    Para vincular um prédio, é necessário:<br>
+                    <ul>
+                        <li>Selecionar um Prédio que esteja livre;</li>
+                    </ul><br>
+                    Só aparece para vincular os Prédios que estão livres.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="unicurso_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalhes da Unidade: Cursos - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar os detalhas de uma Unidade. Esta aba mostra os Cursos VINCULADOS
+                    a Unidade selecionada. É possível vincular e desvincular um curso da Unidade. <br><br>
+                    Para vincular um curso, é necessário:<br>
+                    <ul>
+                        <li>Selecionar o Curso que esteja livre;</li>
+                    </ul><br>
+                    Só aparece para vincular os Cursos que estão livres.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

@@ -129,3 +129,4 @@ class Alocacaosala
         return $this->sala;
     }
 }
+

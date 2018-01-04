@@ -19,7 +19,7 @@ if (!empty($_POST)) {
                                                                             aria-hidden="true"/>
             </a>
             <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#semestreletivo_info">Semestre
-                letivo cadastrado por curso para a alocação.</a>
+                letivo cadastrado por curso para a alocação(?)</a>
         </nav>
     </div>
     <div class="row">
@@ -75,24 +75,32 @@ if (!empty($_POST)) {
 </div>
 
 <!-- Modal - Info -->
-<div class="modal fade" id="semestreletivo_info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="semestreletivo_info" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Alocação - Semestre letivo</h4>
+                <h5 class="modal-title">Alocação: Semestre Letivo - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
-                <form id="semestreletivo" method="post" class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-md-5 col-md-offset-3">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                Ok
-                                <span class="glyphicon glyphicon-ok" aria-hidden="true"/></button>
-                        </div>
-                    </div>
-                </form>
+                <p align="justify">
+                    Este menu do sistema tem como objetivo o cadastro dos Semestres Letivos. É possível
+                    cadastrar e excluir um Semestre Letivo, acessando os detalhes sobre ele. Um semestre letivo é necessário para de fazer
+                    uma alocação, sendo cada semestre letivo separado por curso e vinculado a um Semestre previamente cadastrado. <br><br>
+                    Para cadastrar um Semestre Letivo, é necessário:<br>
+                    <ul>
+                        <li>O Semestre;</li>
+                        <li>Os cursos;</li>
+                    </ul><br>
+                    Todos os campos são obrigatórios, e há a possibilidade de selecionar vários cursos, sendo obrigatório ao menos um. Não é
+                    possível cadastrar um semestre letivo para um curso que já está com cadastro. <br><br>
+                    Diferente do Semestre, o Semestre Letivo está vinculado a um Curso e um Semestre previamente cadastrado.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

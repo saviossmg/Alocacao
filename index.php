@@ -42,8 +42,8 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Operações
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" id="alocacao_nav">Alocação - dev</a></li>
-                    <li><a href="#" id="relatorio_nav">Relatórios - dev</a></li>
+                    <li><a href="#" id="alocacao_nav">Alocação</a></li>
+                    <li><a href="#" id="relatorio_nav">Relatórios</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -60,13 +60,13 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Registros
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tipos
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" id="status_nav">Status</a></li>
+<!--                    <li><a href="#" id="status_nav">Status</a></li>-->
                     <li><a href="#" id="tipoequipamentos_nav">Equipamentos</a></li>
-                    <li><a href="#" id="tipossalas_nav">Tipos de Salas</a></li>
-                    <li><a href="#" id="prioridade_nav">Prioridade</a></li>
+                    <li><a href="#" id="tipossalas_nav">Salas</a></li>
+<!--                    <li><a href="#" id="prioridade_nav">Prioridade</a></li>-->
                 </ul>
             </li>
         </ul>

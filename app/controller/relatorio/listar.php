@@ -25,15 +25,15 @@ for($i = 1; $i <= $numero; $i++ ) {
     $descrição = "";
     if($i == 1){
         $tipo = "Identificação de Salas";
-        $descrição = "Relatório que identifica a sala com curso, periodo e dias que está ocupada ou livre. Fica sempre na porta da sala.";
+        $descrição = "Relatório que identifica a sala com curso, periodo e dias que está ocupada ou livre. Fica na porta da sala.";
     }
     if($i == 2){
         $tipo = "Mapa de Uso do Curso";
         $descrição = "Relatório que identifica as salas utilizadas por um curso. Fica nos murais dos blocos.";
     }
     if($i == 3){
-        $tipo = "W.I.P";
-        $descrição = "W.I.P";
+        $tipo = "Mapa de Uso das Salas ";
+        $descrição = "Relatório que identifica as salas utilizadas por todo um campûs. Fica nos murais dos blocos.";
     }
     $data .= '
             <tr>

@@ -24,17 +24,18 @@ try {
         $data['lab'] = $model->getLaboratorio()->getId();
         $data['tipouso'] = $model->getTipouso()->getId();
         $data['observacao'] = $model->getObservacao();
+        $data['curso'] = "";
         $data['turno'] = "";
         $data['dia'] = "";
 
-        if(!empty($model->getTurno())){
+        if(!empty($model->getCurso()))
+            $data['curso'] = $model->getCurso()->getId();
+
+        if(!empty($model->getTurno()))
             $data['turno'] = $model->getTurno()->getId();
-        }
 
-        if(!empty($model->getDia())){
+        if(!empty($model->getDia()))
             $data['dia'] = $model->getDia()->getId();
-        }
-
 
         $mensagem = "Laborátorio carregado com Sucesso!";
         $resultado = [ 'status' => true,'mensagem' => $mensagem,'data' => $data ];

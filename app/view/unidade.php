@@ -9,7 +9,7 @@
                 <i class="fa fa-plus-square"></i>Nova Unidade <span class="glyphicon glyphicon-plus"
                                                                     aria-hidden="true"/>
             </a>
-            <a class="nav-link disabled pull-right" href="#">Unidades, Campus e outros Polos</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#unidade_info">Unidades, Campus e outros Polos (?).</a>
         </nav>
     </div>
     <div class="row">
@@ -105,6 +105,42 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="unidade_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Unidades e Campus - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo o cadastro e manipulação das Unidades, Campus e polos da Universidade. É possível
+                    cadastrar, editar e excluir um Campus, bem como acessar os detalhes sobre ele. Para ver o que cada botão faz, passe o cursor
+                    do mouse sobre ele.<br><br>
+                    Para cadastrar uma nova Unidade, é necessário:<br>
+                    <ul>
+                        <li>Nome da Unidade;</li>
+                        <li>Endereço (por extenso);</li>
+                        <li>CEP (apenas números);</li>
+                        <li>Latitude (apenas números); </li>
+                        <li>Longitude (apenas números); </li>
+                        <li>Diretor Geral (um servidor já cadastrado); </li>
+                        <li>Administrador (um servidor já cadastrado); </li>
+                        <li>Se está ativo ou não; </li>
+                    </ul><br>
+                    Todos os campos são obrigatórios.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

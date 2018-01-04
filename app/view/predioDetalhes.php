@@ -29,7 +29,8 @@
                         <i class="fa fa-plus-square"></i>Vincular Sala <span class="glyphicon glyphicon-plus"
                                                                              aria-hidden="true"/>
                     </a>
-                    <a class="nav-link disabled pull-right" href="#">Salas vinculadas ao Prédio.</a>
+                    <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#predetalhes_info">
+                        Salas vinculadas ao Prédio. (?)</a>
                 </nav>
                 <div class="records_content_salaspredio"></div>
             </div>
@@ -66,6 +67,34 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="predetalhes_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalhes do Prédio: Salas </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo acessar os detalhas de um Prédio. Esta aba mostra as Salas VINCULADAS
+                    ao Prédio selecionado. É possível vincular e desvincular uma sala do Prédio,  além de acessar os detalhes da sala. <br><br>
+                    Para vincular uma sala, é necessário:<br>
+                    <ul>
+                        <li>Selecionar uma Sala que esteja livre;</li>
+                    </ul><br>
+                    Só aparece para vincular as Salas que estão livres.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
  * Data: 12/09/2017
  */
 
-var dir = "app/controller/";
+var dir = "app/controller/alocacao/";
 var dirLab = "app/controller/laboratorio/";
 
 //ALOCACAO
@@ -89,6 +89,7 @@ function salvarLaboratorio() {
         var tipouso = $("#tipouso").val();
         var turnolab = $("#turnolab").val();
         var dia = $("#dia").val();
+        var curso = $("#curso").val();
 
         // Add record
         $.post(dirLab + "inserir.php", {
@@ -98,7 +99,8 @@ function salvarLaboratorio() {
             lab: lab,
             tipouso: tipouso,
             turnolab: turnolab,
-            dia: dia
+            dia: dia,
+            curso: curso
         }, function (data, status) {
             //captura o retorno da função
             retorno = JSON.parse(data);
@@ -119,6 +121,7 @@ function salvarLaboratorio() {
                 $("#tipouso").val("");
                 $("#turno").val("");
                 $("#dia").val("");
+                $("#curso").val("");
 
             }
             else {
@@ -161,6 +164,7 @@ function editarLab(ident) {
                 $("#turnolab").val(retorno.data.turno);
                 $("#dia").val(retorno.data.dia);
                 $("#observacao").val(retorno.data.observacao);
+                $("#curso").val(retorno.data.curso);
                 validarLab();
                 // abre o modal
                 $("#laboratorio_modal").modal("show");
@@ -511,6 +515,18 @@ function comboUso() {
         });
 }
 
+function comboCurso() {
+    $('#curso').empty(); //remove all child nodes
+    $.post("app/controller/curso/carregarCombo.php",{
+            livre: null
+        },
+        function (data, status) {
+            //Coloca os valores do retorno nos campos devidos
+            $("#curso").append('<option value="">Selecione o Curso</option>');
+            $("#curso").append(data);
+        });
+}
+
 $(document).ready(function () {
     // Lista os arquivos quando a pagina é carregada
     listarOfertas(); // chama a função
@@ -522,6 +538,7 @@ $(document).ready(function () {
     comboDia();
     comboLab();
     comboUso();
+    comboCurso();
 
     $('#ofertas').dataTable();
     $('#oferta_modal').on('hide.bs.modal', function (event) {

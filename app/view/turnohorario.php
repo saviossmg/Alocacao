@@ -9,7 +9,7 @@
                 <i class="fa fa-plus-square"></i>Novo Horário <span class="glyphicon glyphicon-plus"
                                                                     aria-hidden="true"/>
             </a>
-            <a class="nav-link disabled pull-right" href="#">Horários de iniicio e fim dos turnos.</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#turnos_info">Horários de iniicio e fim dos turnos (?).</a>
         </nav>
     </div>
     <div class="row">
@@ -78,6 +78,38 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - Info -->
+<div class="modal fade" id="turnos_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Turnos/Horários - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo a edição dos Horários dos Turnos da Universidade.
+                    É possível editar os horários dos Turnos, sendo essas informações críticas para a alocação de uma sala.
+                    <br><br>Ele é dividido em :<br>
+                    <ul>
+                        <li>Turno que deve ser editado;</li>
+                        <li>Horário 1 – início da aula;</li>
+                        <li>Horário 1 – final da aula;</li>
+                        <li>Horário 2 – início da aula;</li>
+                        <li>Horário 2 – final da aula;</li>
+                    </ul><br>
+                    Todos os campos são obrigatórios, esses horários devem ser editados sempre que há uma mudança nos horários.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>

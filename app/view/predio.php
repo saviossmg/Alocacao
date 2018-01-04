@@ -8,7 +8,7 @@
             <a class="btn btn-success btn-small" href="#" data-toggle="modal" data-target="#predio_modal">
                 <i class="fa fa-plus-square"></i>Novo Prédio <span class="glyphicon glyphicon-plus" aria-hidden="true"/>
             </a>
-            <a class="nav-link disabled pull-right" href="#">Predios e Blocos</a>
+            <a class="nav-link disabled pull-right" data-toggle="modal" data-target="#predio_info">Predios e Blocos(?)</a>
         </nav>
     </div>
     <div class="row">
@@ -73,6 +73,37 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="predio_info" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Predios e Blocos - Ajuda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p align="justify">
+                    Este menu do sistema tem como objetivo o cadastro e manipulação dos Prédios e Blocos Universidade.
+                    É possível cadastrar, editar e excluir um Prédio, bem como acessar os detalhes sobre ele. Para ver o que
+                    cada botão faz, passe o cursor do mouse sobre ele.<br><br>
+                    Para cadastrar um novo Prédio, é necessário<br>
+                    <ul>
+                        <li>Nome do Prédio - Obrigatório;</li>
+                        <li>Pisos em números - Obrigatório;</li>
+                        <li>Unidade ao qual pertence;</li>
+                        <li>Se está ativo ou não; </li>
+                    </ul><br>
+                    Caso não vincule o prédio a uma unidade, é possível faze-lo no menu de Detalhes de Unidade.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
             </div>
         </div>
     </div>
