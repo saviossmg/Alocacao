@@ -206,6 +206,19 @@ function  inserirNovoRegistro($ofertaP,$entityManager, $curso, $semestre){
 //edita um registro existente
 function  editaRegistro($model, $ofertaP,$entityManager){
     $editou = false;
+    if(is_array($ofertaP['professorTitular'])){
+        if(count($ofertaP['professorTitular']) == 0){
+            $texto = "N/D";
+            $ofertaP['professorTitular'] = $texto;
+        }
+        else{
+            $texto = "";
+            foreach ($ofertaP['professorTitular'] as $k => $v){
+                $texto .= $v ." - ";
+            }
+            $ofertaP['professorTitular'] = $texto;
+        }
+    }
     //pega o modelo que passou no parametro
     if(strcmp($model->getCodturma(),$ofertaP['codTurma'])!=0 || strcmp($model->getProfessortitular(),$ofertaP['professorTitular'])!= 0
     || $model->getDiasemana()->getId() != $ofertaP['diaSemana']){
@@ -253,10 +266,8 @@ $atualizados = 0;
 
 try {
     //carrega os modelos
-//    $curso = $entityManager->find('Vwcurso', $_POST['idCurso']);
-//    $semestre = $entityManager->find('Vwsemestre', $_POST['idSemestre']);
-    $curso = $entityManager->find('Vwcurso', 4);
-    $semestre = $entityManager->find('Vwsemestre', 3);
+	$curso = $entityManager->find('Vwcurso', $_POST['idCurso']);
+	$semestre = $entityManager->find('Vwsemestre', $_POST['idSemestre']);
 
     //procura os registros no banco
     //pega o total de registros
