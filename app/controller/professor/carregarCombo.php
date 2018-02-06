@@ -15,7 +15,7 @@ $data = "";
 //cria a query builder
 $qb = $entityManager->createQueryBuilder();
 $qb->select("s")
-    ->from('VwServidor', "s")
+    ->from('Vwservidor', "s")
     //->where('s.ativo = :ativo')
     ->andWhere("s.id IS NOT NULL ");
 //->setParameter('ativo', 1);

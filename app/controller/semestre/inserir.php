@@ -37,8 +37,17 @@ try {
         }
         throw new Exception($mensagem);
     }
-    $auxDataI = \date("Y-m-d", strtotime($parametros['datainicio']));
-    $auxDataF = \date("Y-m-d", strtotime($parametros['datafim']));
+
+    $datai = explode ('/', $parametros['datainicio']);
+    $dataf = explode ('/', $parametros['datafim']);
+
+
+    $datai = $datai[2].'-'.$datai[1].'-'.$datai[0];
+    $dataf = $dataf[2].'-'.$dataf[1].'-'.$dataf[0];
+
+    $auxDataI = \date("Y-m-d", strtotime($datai));
+    $auxDataF = \date("Y-m-d", strtotime($dataf));
+
 
     //verificação dos campos
     if($auxDataF <= $auxDataI){

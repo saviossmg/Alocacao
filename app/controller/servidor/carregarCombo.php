@@ -9,8 +9,6 @@
 define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/');
 require_once BASE_DIR . 'vendor/bootstrap.php';
 
-$_POST['ativo'];
-
 // Design initial table header
 $data = "";
 
@@ -18,12 +16,12 @@ $data = "";
 $qb = $entityManager->createQueryBuilder();
 if(empty($_POST['ativo'])){
     $qb->select("s")
-        ->from('VwServidor', "s")
+        ->from('Vwservidor', "s")
         ->andWhere("s.id IS NOT NULL ");
 }
 else{
     $qb->select("s")
-        ->from('VwServidor', "s")
+        ->from('Vwservidor', "s")
         ->where('s.ativo = :ativo')
         ->andWhere("s.id IS NOT NULL ")
         ->setParameter('ativo', 1);

@@ -77,8 +77,8 @@ try {
 
     }
     //busca o administrador o diretor geral
-    $administrador = $entityManager->find('VwServidor', $parametros['administrador']);
-    $diretorgeral = $entityManager->find('VwServidor', $parametros['diretorgeral']);
+    $administrador = $entityManager->find('Vwservidor', $parametros['administrador']);
+    $diretorgeral = $entityManager->find('Vwservidor', $parametros['diretorgeral']);
 
     //seta os parametros corretamente
     $model->setNome($parametros['nome']);

@@ -16,7 +16,7 @@ try {
     if (isset($_POST['id']) && isset($_POST['id']) != "") {
         // get user id
         $id = $_POST['id'];
-        $model = $entityManager->find('VwServidor', $id);
+        $model = $entityManager->find('Vwservidor', $id);
 
         $entityManager->remove($model);
         $entityManager->flush();

@@ -26,7 +26,7 @@ $data = '<table id="professores" class="table table-condensed-bordered">
 //cria a query builder    
 $qb = $entityManager->createQueryBuilder();
 $qb->select("p")
-        ->from('VwServidor', "p")
+        ->from('Vwservidor', "p")
         ->where('p.docente = :docente')
         ->andWhere("p.id IS NOT NULL ")
         ->setParameter('docente', 1);

@@ -46,11 +46,11 @@ try {
     $model;
     if (empty($parametros['id'])) {
         //instancia novo model
-        $model = new VwServidor;
+        $model = new Vwservidor;
         $mensagem = "Registro inserido com SUCESSO!";
     } //atualizar
     else {
-        $model = $entityManager->find('VwServidor', $parametros['id']);
+        $model = $entityManager->find('Vwservidor', $parametros['id']);
         $mensagem = "Registro atualizado com SUCESSO!";
 
     }

@@ -19,7 +19,7 @@ try {
         $mensagem = "Servidor não informado";
         $resultado =[ 'status' => false, 'mensagem' => $mensagem ,'data' => null];
     } else {
-        $model = $entityManager->find('VwServidor', $_POST['id']);
+        $model = $entityManager->find('Vwservidor', $_POST['id']);
         $data['id'] = $model->getId();
         $data['nome'] = $model->getNome();
         $data['matricula'] = $model->getMatricula();
