@@ -41,7 +41,9 @@ try {
                 $data[$idx]["id"] = $model->getId();
                 $data[$idx]["nome"] = $model->getNome();
                 $data[$idx]["pisos"] = $model->getPisos();
-                $data[$idx]["idunidade"] = $model->getUnidade()->getId();
+                $data[$idx]["idunidade"] = null;
+                if(!empty($model->getUnidade()))
+					$data[$idx]["idunidade"] = $model->getUnidade()->getId();
                 $data[$idx]["ativo"] = $model->getAtivo();
             }
             $mensagem =  $totalregistro." registros encontrados";

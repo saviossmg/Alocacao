@@ -42,7 +42,9 @@ try {
                 $data[$idx]["id"] = $model->getId();
                 $data[$idx]["nome"] = $model->getNome();
                 $data[$idx]["piso"] = $model->getPiso();
-                $data[$idx]["idpredio"] = $model->getPredio()->getId();
+                $data[$idx]["idpredio"] = null;
+				if(!empty($model->getPredio()))
+					$data[$idx]["idpredio"] = $model->getPredio()->getId();
                 $data[$idx]["tipo"] = $model->getTipo()->getDescricao();
                 $data[$idx]["ativo"] = $model->getAtivo();
             }
