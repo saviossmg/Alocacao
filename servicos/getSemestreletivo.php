@@ -38,8 +38,8 @@ try {
         if ($totalregistro > 0) {
             foreach ($rs as $idx => $model) {
                 $data[$idx]["id"] = $model->getId();
-                $data[$idx]["semestre"] = $model->getSemestre()->getId();
-                $data[$idx]["curso"] = $model->getCurso()->getId();
+                $data[$idx]["idsemestre"] = $model->getSemestre()->getId();
+                $data[$idx]["idcurso"] = $model->getCurso()->getId();
             }
             $mensagem =  $totalregistro." registros encontrados";
             $resultado = ['status' => true, 'mensagem' => $mensagem, 'data' => $data];

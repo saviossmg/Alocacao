@@ -75,14 +75,14 @@ try{
         if ($totalregistro > 0) {
             foreach ($rs as $idx => $model) {
                 $data[$idx]["semestre"] = $model->getSemestre()->getId();
-                $data[$idx]["sala"] = $model->getSala()->getId();
-                $data[$idx]["oferta"] = $model->getOferta()->getId();
+                $data[$idx]["idsala"] = $model->getSala()->getId();
+                $data[$idx]["idoferta"] = $model->getOferta()->getId();
 
                 //procura a oferta
                 $ofer = $entityManager->find('Oferta',$model->getOferta()->getId());
                 $data2[$idx]["id"] = $ofer->getId();
                 $data2[$idx]["nometurma"] = $ofer->getNometurma();
-                $data2[$idx]["curso"] = $ofer->getCurso()->getId();
+                $data2[$idx]["idcurso"] = $ofer->getCurso()->getId();
                 $data2[$idx]["diasemana"] = $ofer->getDiasemana()->getDescricao();
                 $data2[$idx]["periodo"] = $ofer->getPeriodo();
                 $data2[$idx]["disciplina"] = $ofer->getDisciplina();

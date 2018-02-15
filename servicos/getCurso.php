@@ -41,7 +41,7 @@ try {
                 $data[$idx]["id"] = $model->getId();
                 $data[$idx]["nome"] = $model->getNome();
                 $data[$idx]["codcurso"] = $model->getCodcurso();
-                $data[$idx]["unidade"] = $model->getUnidade()->getId();
+                $data[$idx]["idunidade"] = $model->getUnidade()->getId();
             }
             $mensagem =  $totalregistro." registros encontrados";
             $resultado = ['status' => true, 'mensagem' => $mensagem, 'data' => $data];
