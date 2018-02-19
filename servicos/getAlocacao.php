@@ -74,7 +74,8 @@ try{
 
         if ($totalregistro > 0) {
             foreach ($rs as $idx => $model) {
-                $data[$idx]["semestre"] = $model->getSemestre()->getId();
+                $data[$idx]["id"] = $model->getId();
+                $data[$idx]["idsemestre"] = $model->getSemestre()->getId();
                 $data[$idx]["idsala"] = $model->getSala()->getId();
                 $data[$idx]["idoferta"] = $model->getOferta()->getId();
 

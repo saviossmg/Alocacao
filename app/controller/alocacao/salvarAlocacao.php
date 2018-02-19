@@ -70,7 +70,7 @@ try {
                     //vai verificar se o mesmo turno
                     if($turno == $parametros["turno"] && $curso == $ofer->getCurso()->getId()){
                         //verifica se são diferentes o curso e o periodo
-                        if($periodo != $ofer->getPeriodo())
+                        if($periodo != $ofer->getPeriodo() && $periodo != 0)
                             $match = true;
                     }
                     //se der verdadeiro para alguma verificacao ele solta a exceção
@@ -133,7 +133,8 @@ try {
         if(!empty($alocacoes)){
             //verifica se tem algo no mesmo dia, turno e horario
             foreach ($alocacoes as $key => $val){
-                if($parametros["diasemana"] == $val->getOferta()->getDiasemana()->getId() && $parametros["turno"] == $val->getOferta()->getTurno()->getId()){
+                if($parametros["diasemana"] == $val->getOferta()->getDiasemana()->getId() && $parametros["turno"] == $val->getOferta()->getTurno()->getId()
+                    && $val->getOferta()->getPeriodo() != 0){
                     $match = false;
                     //verifica o horario, se for cheio ou igual,ele nao deixa passare
                     if($val->getOferta()->getTipohorario() == 3 ){

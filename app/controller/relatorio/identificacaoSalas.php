@@ -118,7 +118,7 @@ function preencherSala($model, $salasalocadas, $eM)
             $turno = $val->getOferta()->getTurno()->getId();
             $dia = $val->getOferta()->getDiasemana()->getId();
             //MANHA
-            if ($turno == 9) {
+            if ($turno == 9 && $dia != 18) {
                 $dMan[$cMan] = $val->getOferta()->getDiasemana()->getId();
                 if ($val->getOferta()->getPeriodo() == 0)
                     $manha = '<p class="texto3">' . $val->getOferta()->getCurso()->getSigla() . ' REGUL. </p><br>';
@@ -128,7 +128,7 @@ function preencherSala($model, $salasalocadas, $eM)
                 $cMan++;
             }
             //TARDE
-            if ($turno == 10) {
+            if ($turno == 10 && $dia != 18) {
                 $dTar[$cTar] = $val->getOferta()->getDiasemana()->getId();
                 if ($val->getOferta()->getPeriodo() == 0)
                     $tarde = '<p class="texto3">' . $val->getOferta()->getCurso()->getSigla() . ' REGUL. </p><br>';
@@ -138,7 +138,7 @@ function preencherSala($model, $salasalocadas, $eM)
                 $cTar++;
             }
             //NOITE
-            if ($turno == 11) {
+            if ($turno == 11 && $dia != 18) {
                 $dNoi[$cNoi] = $val->getOferta()->getDiasemana()->getId();
                 if ($val->getOferta()->getPeriodo() == 0)
                     $noite = '<p class="texto3">' . $val->getOferta()->getCurso()->getSigla() . ' REGUL. </p><br>';
