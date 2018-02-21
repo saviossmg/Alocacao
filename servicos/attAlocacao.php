@@ -35,7 +35,7 @@ try{
 
         if (!empty($alocacao)) {        
 			$data["id"] = $alocacao->getId();		
-			$data["semestre"] = $alocacao->getSemestre()->getId();
+			$data["idsemestre"] = $alocacao->getSemestre()->getId();
 			$data["idsala"] = $alocacao->getSala()->getId();
 			$data["idoferta"] = $alocacao->getOferta()->getId();
 
