@@ -41,6 +41,8 @@ INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (6, 'Sábado', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Monitoria', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Uso Comum', 1);
 INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (7, 'Uso Exclusivo', 1);
+INSERT INTO registro (IdEntidade, Descricao, Ativo) VALUES (1, 'Sala de Orientação', 1);
+
 
 INSERT INTO sala (nome, piso, predio,tipo,ativo) VALUES ('Sala 1', 2, 1, 1, 1);
 INSERT INTO sala (nome, piso, predio,tipo,ativo) VALUES ('Sala 2', 2, 1, 1, 1);

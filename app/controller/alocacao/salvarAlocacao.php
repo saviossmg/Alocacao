@@ -130,7 +130,7 @@ try {
         }
         //se passou, faz a verificaççao geral
         //1 se tem alguma alocacao na mesma sala
-        if(!empty($alocacoes)){
+        if(!empty($alocacoes) && $sala->getTipo()->getId() != 22 ){
             //verifica se tem algo no mesmo dia, turno e horario
             foreach ($alocacoes as $key => $val){
                 if($parametros["diasemana"] == $val->getOferta()->getDiasemana()->getId() && $parametros["turno"] == $val->getOferta()->getTurno()->getId()
